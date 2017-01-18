@@ -1,1 +1,2 @@
-# modrickos
+# modrickos BETA STAGE
+#modrick os use  
