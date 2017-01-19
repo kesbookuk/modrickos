@@ -1,21 +1,29 @@
 #include "../include/shell.h"
+string dir = "modrick/";
 void launch_shell(int n)
+
 {
+    
 	string ch = (string) malloc(200); // util.h
 	int counter = 0;
 	do
 	{
-			print("modrick");
+        print("(");
+			print(dir);
 			print(")> ");
 		    ch = readStr(); //memory_copy(readStr(), ch,100);
 		    if(strEql(ch,"cmd"))
 		    {
-		            print("\nYou are already in kterm\n");
+		            print("\nYou are already in kterm well a new window is added\n");
 					launch_shell(n+1);
 		    }
 		    else if(strEql(ch,"clear"))
 		    {
 		            clearScreen();
+		    }
+		     else if(strEql(ch,"cd"))
+		    {
+		    	cd();
 		    }
 		    else if(strEql(ch,"sum"))
 		    {
@@ -235,9 +243,10 @@ void print_matrix(int matrix[][100],int rows,int cols)
     
     
 }void modrick(){
-     print("\n####=#####################################################################################################################");   
-     print("\n##===#####################################################################################################################");   
-     print("\n=====#####################################################################################################################");   
+     print("\n####=############################################################");   
+     print("\n##===############################################################");   
+     print("\n=====############################################################");   
+     print("\n=====############################################################");   
     
     
 }
@@ -267,6 +276,17 @@ void set_background_color()
 	int bg_color = str_to_int(readStr());
 	set_screen_color(text_color,bg_color);
 	clearScreen();
+}
+void cd()
+{
+	print("\ntype a directory\n");
+	
+
+	
+string stringir = readStr();
+	print("\n");
+	dir = stringir;
+    clearScreen();
 }
 
 void multiply()
