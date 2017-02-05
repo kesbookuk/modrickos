@@ -1,5 +1,10 @@
 #include "../include/shell.h"
 string dir = "modrick/";
+void shutdown(){
+   print("                        shutting down                           ");
+    for(;;);
+    
+}
 void launch_shell(int n)
 
 {
@@ -16,10 +21,24 @@ void launch_shell(int n)
 		    {
 		            print("\nYou are already in kterm well a new window is added\n");
 					launch_shell(n+1);
+		    }else if(strEql(ch,"cr"))
+		    {
+		            bsod(1000);
+                    print("\nGood Bye!\n");
+                    shutdown();
 		    }
 		    else if(strEql(ch,"clear"))
 		    {
 		            clearScreen();
+		    }else if(strEql(ch,"kterm"))
+		    {
+		            print("\n modrick windows open: ");
+                    print(n);
+                    print("\n");
+		    }else if(strEql(ch,"kterm -close"))
+		    {
+		            print("\n modrick closed a kterm");
+                    launch_shell(n-1);
 		    }
 		     else if(strEql(ch,"cd"))
 		    {
@@ -286,7 +305,9 @@ void cd()
 string stringir = readStr();
 	print("\n");
 	dir = stringir;
+    stringir = "";
     clearScreen();
+    
 }
 
 void multiply()
@@ -314,4 +335,21 @@ void help()
 	
 	print("\n\n");
 }
+void bsod(int error){
+	clearScreen();
+	print_colored("\nmodrick has had a bad error and must restart",1,15);
+	print_colored("\nmodrick error",1,15);
+	print_colored("\nError Code:",1,15);
+	print_colored(error,1,15);
+    print("\nGood Bye!\n");
+	
+}
 
+void bsodmsg(string message){
+	clearScreen();
+	print_colored("\nmodrick has had a bad error and must restart",1,15);
+	print_colored("\nmodrick error",1,15);
+	print_colored("\n\nError Code: ",1,15);
+	print_colored(message,1,15);	
+    print("\nGood Bye!\n");
+}
