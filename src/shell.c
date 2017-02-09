@@ -1,7 +1,8 @@
 #include "../include/shell.h"
 string dir = "modrick/";
 void shutdown(){
-   print("                        shutting down                           ");
+   print("                        shutting down system                           ");
+	print("now press shutdown on your computer by pressing the shutdown button and holding it NOW");
     for(;;);
     
 }
