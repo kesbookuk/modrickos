@@ -342,7 +342,7 @@ void bsod(int error){
 	print_colored("\nmodrick error",1,15);
 	print_colored("\nError Code:",1,15);
 	print_colored(error,1,15);
-    print("\nGood Bye!\n");
+    shutdown();
 	
 }
 
@@ -352,5 +352,5 @@ void bsodmsg(string message){
 	print_colored("\nmodrick error",1,15);
 	print_colored("\n\nError Code: ",1,15);
 	print_colored(message,1,15);	
-    print("\nGood Bye!\n");
+    shutdown();
 }
