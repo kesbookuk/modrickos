@@ -186,22 +186,7 @@ int sum_array(int arr[],int n)
 	}
 	return s;
 }
-void fibonaci()
-{
-	print("\nHow many Elements: ");
-	int n = str_to_int(readStr()); 
-	print("\n");
-	int i = 0;
-	for(i =0;i<n;i++)
-	{
-		print("Fibo ");
-		print(int_to_string(i));
-		print(" : ");
-		print(int_to_string(fibo(i)));
-		print("\n");
-	}
-	
-}
+void fibonaci() { printf("\nHow many Elements: "); int n = str_to_int(readStr()); printf("\n"); int i = 0; uint_64 fibo[n]; fibo[0] = 0; fibo[1] = 1; for(i =1;i<n;i++) { printf("Fibo "); printf(int_to_string(i)); printf(" : "); if(i == 1){ printf(int_to_string(1)); }else{ printf(int_to_string(fibo[i] = fibo[i-1] + fibo[i-2])); } printf("\n"); } }
 int fibo(int n)
 {
 	if(n <2)
@@ -263,10 +248,7 @@ void print_matrix(int matrix[][100],int rows,int cols)
     
     
 }void modrick(){
-     print("\n####=############################################################");   
-     print("\n##===############################################################");   
-     print("\n=====############################################################");   
-     print("\n=====############################################################");   
+     print("wip");   
     
     
 }
