@@ -1,8 +1,7 @@
 #include "../include/shell.h"
 string dir = "modrick/";
 void shutdown(){
-   print("                        shutting down system                           ");
-	print("now press shutdown on your computer by pressing the shutdown button and holding it NOW");
+   print("                        shutting down                           ");
     for(;;);
     
 }
@@ -25,7 +24,7 @@ void launch_shell(int n)
 		    }else if(strEql(ch,"cr"))
 		    {
 		            bsod(1000);
-          
+                    print("\nGood Bye!\n");
                     shutdown();
 		    }
 		    else if(strEql(ch,"clear"))
@@ -44,6 +43,9 @@ void launch_shell(int n)
 		     else if(strEql(ch,"cd"))
 		    {
 		    	cd();
+		    }  else if(strEql(ch,"install"))
+		    {
+		    	install();
 		    }
 		    else if(strEql(ch,"sum"))
 		    {
@@ -57,7 +59,7 @@ void launch_shell(int n)
 		    }
 		    else if(strEql(ch,"exit"))
 		    {
-		    	print("\nGood Bye!\n");
+		    	shutdown();
 		    }
 		    else if(strEql(ch,"echo"))
 		    {
@@ -78,6 +80,9 @@ void launch_shell(int n)
 		    else if(strEql(ch,"help"))
 		    {
 		    	help();
+		    }else if(strEql(ch,"echo -color"))
+		    {
+		    	echocolor();
 		    }
 		    else if(strEql(ch,"color"))
 		    {
@@ -91,7 +96,9 @@ void launch_shell(int n)
 		    
 		    else
 		    {
-		            print("\nBad command!\n");
+                print("\n");
+		            print(ch);
+                    print(" is a command or file that does not exist\n");
 		           
 		    } 
 	} while (!strEql(ch,"exit"));
@@ -108,6 +115,7 @@ void sum()
 	int arr[n];
 	fill_array(arr,n);
 	int s = sum_array(arr,n);
+    
 	print("Result: ");
 	print(int_to_string(s));
 	print("\n");
@@ -186,29 +194,21 @@ int sum_array(int arr[],int n)
 	}
 	return s;
 }
-void fibonaci() { 
-    printf("\nHow many Elements: "); 
-    int n = str_to_int(readStr()); 
-    printf("\n"); 
-    int i = 0; 
-    uint_64 fibo[n]; 
-    fibo[0] = 0; 
-    fibo[1] = 1; 
-    for(i =1;i<n;i++) { 
-        printf("Fibo "); 
-        printf(int_to_string(i)); 
-        printf(" : "); 
-        if(i == 1){ 
-            printf(int_to_string(1)); 
-            
-        }else{ 
-            printf(int_to_string(fibo[i] = fibo[i-1] + fibo[i-2])); 
-            
-        } 
-        printf("\n"); 
-        
-    } 
-    
+void fibonaci()
+{
+	print("\nHow many Elements: ");
+	int n = str_to_int(readStr()); 
+	print("\n");
+	int i = 0;
+	for(i =0;i<n;i++)
+	{
+		print("Fibo ");
+		print(int_to_string(i));
+		print(" : ");
+		print(int_to_string(fibo(i)));
+		print("\n");
+	}
+	
 }
 int fibo(int n)
 {
@@ -266,13 +266,37 @@ void print_matrix(int matrix[][100],int rows,int cols)
 	}
 }void box(){
     
- print("\n####\n#  #\n#  #\n####\n");   
+ print_colored("\n#####\n#   #\n#   #\n#####\n",1,2);   
     
     
     
-}void modrick(){
-     print("wip");   
+}void install(){
     
+    set_screen_color(6,1);
+    clearScreen();
+    print("<<<<<<<<<<<<<<<<welcome to modrick install>>>>>>>>>>>>>>>>>>>>>>>>>>");
+    
+    
+    
+    
+}
+
+
+
+void modrick(){
+     print_colored("\nerror wip & no display drivers detected\n", 4, 14);   
+    
+    
+}void echocolor(){
+    
+     print("\n\n Text ? : ");
+	string textfecho = readStr();
+    print("\n\n Text color ? : ");
+	int text_color_echo = str_to_int(readStr());
+	print("\n\n Background color ? : ");
+	int bg_color_echo = str_to_int(readStr());
+	print_colored(textfecho,text_color_echo,bg_color_echo);
+	clearScreen();
     
 }
 void set_background_color()
@@ -347,7 +371,7 @@ void bsod(int error){
 	print_colored("\nmodrick error",1,15);
 	print_colored("\nError Code:",1,15);
 	print_colored(error,1,15);
-    shutdown();
+    print("\nGood Bye!\n");
 	
 }
 
@@ -357,5 +381,5 @@ void bsodmsg(string message){
 	print_colored("\nmodrick error",1,15);
 	print_colored("\n\nError Code: ",1,15);
 	print_colored(message,1,15);	
-    shutdown();
+    print("\nGood Bye!\n");
 }

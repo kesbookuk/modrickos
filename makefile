@@ -63,14 +63,14 @@ build:all
 
 
 	mkdir modrick/boot/grub/
-	echo set default=0 >> modrikc/boot/grub/grub.cfg
+	echo set default=0 >> modrick/boot/grub/grub.cfg
 	echo set timeout=4 >> modrick/boot/grub/grub.cfg
 	echo menuentry "modrick" { >> modrick/boot/grub/grub.cfg
 	echo         set root='(hd96)' >> modrick/boot/grub/grub.cfg
-	echo         multiboot /boot/kernel.bin >> modrick/boot/grub/grub.cfg
+	echo         multiboot boot/kernel.bin >> modrick/boot/grub/grub.cfg
 	echo } >> modrick/boot/grub/grub.cfg
 
-	grub-mkrescue -o modrick.iso modrick/
+	grub-mkrescue -o modrick.iso modick/
 	
 clear:
 	rm -f obj/*.o

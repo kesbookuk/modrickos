@@ -303,6 +303,11 @@ string readStr()
                 buffstr[i] = ' ';
                 i++;
                 break;
+        case 58:
+                printch('^');
+                buffstr[i] = '^';
+                i++;
+                break;
             }
         }
     }

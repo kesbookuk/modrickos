@@ -1,14 +1,15 @@
 #ifndef SHELL_H
 #define SHELL_H
-#include "system.h"
-#include "string.h"
-#include "kb.h"
-#include "screen.h"
-#include "types.h"
-#include "util.h"
+#define MAX_COMMANDS 100
+#include "screencontroller.h"
+#include "kbd.h"
+#include "fat.h"
 
-void launch_shell(int n);
-
-
-
+void init_shell();
+void shell();
+void shell_addchar(char c);
+void shell_enterpressed();
+void shell_backspace();
+void findCommand(string command);
+int shell_can_backspace();
 #endif

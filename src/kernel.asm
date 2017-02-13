@@ -11,4 +11,3 @@ start:
         cli             ;clears the interrupts 
         call kmain      ;send processor to continue execution from the kamin funtion in c code
         hlt             ; halt the cpu(pause it from executing from this address
-stop:

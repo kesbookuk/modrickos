@@ -1,0 +1,12 @@
+<sounds>
+    <title>modrick default</title>
+    <login>login.wav</login>
+    <startup>startup.wav</startup>
+    <info>info.wav</info>
+    <error>error.wav</error>
+    <welcome>welcome.wav</welcome>
+    <deviceout>deviceout.wav</deviceout>
+    <devicein>devicein.wav</devicein>
+    <deviceerror>deviceerror.wav</deviceerror>
+    <warning>warning.wav</warning>
+</sounds> 
