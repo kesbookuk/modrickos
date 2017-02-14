@@ -10,4 +10,7 @@
     <deviceerror>deviceerror.wav</deviceerror>
     <noti>noti.wav</noti>
     <warning>warning.wav</warning>
+    <welcometune>THEAM.wav</welcometune>
+    <messagere>messagere.wav</messagere>
+    <messagesent>messagesent.wav</messagesent>
 </sounds> 
