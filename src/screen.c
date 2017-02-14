@@ -74,9 +74,9 @@ void printch(char c)
                         vidmem[(cursorY * sw + cursorX)*sd]=0;	     //(0xF0 & color)                          
 	        }
 	        break;
-       /* case (0x09):
+       case (0x09):
                 cursorX = (cursorX + 8) & ~(8 - 1); 
-                break;*/
+                break;
         case ('\r'):
                 cursorX = 0;
                 break;

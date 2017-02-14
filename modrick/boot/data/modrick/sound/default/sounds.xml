@@ -8,5 +8,6 @@
     <deviceout>deviceout.wav</deviceout>
     <devicein>devicein.wav</devicein>
     <deviceerror>deviceerror.wav</deviceerror>
+    <noti>noti.wav</noti>
     <warning>warning.wav</warning>
 </sounds> 

@@ -24,7 +24,6 @@ void launch_shell(int n)
 		    }else if(strEql(ch,"cr"))
 		    {
 		            bsod(1000);
-                    print("\nGood Bye!\n");
                     shutdown();
 		    }
 		    else if(strEql(ch,"clear"))

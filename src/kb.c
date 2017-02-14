@@ -12,11 +12,11 @@ string readStr()
         {
             switch(inportb(0x60))
             { 
-      /*case 1:
-                printch('(char)27);           Escape button
+      
+                printch((char)27);          
                 buffstr[i] = (char)27;
                 i++;
-                break;*/
+                break;
         case 2:
                 printch('1');
                 buffstr[i] = '1';
@@ -223,16 +223,16 @@ string readStr()
                 buffstr[i] = (char)44;
                 i++;
                 break;
-     /* case 42:                                 Left shift 
+                                 
                 printch('q');
                 buffstr[i] = 'q';
                 i++;
                 break;
-        case 43:                                 \ (< for somekeyboards)   
+        case 43:                                 
                 printch((char)92);
-                buffstr[i] = 'q';
+                buffstr[i] = '8';
                 i++;
-                break;*/
+                break;
         case 44:
                 printch('z');
                 buffstr[i] = 'z';
@@ -293,14 +293,14 @@ string readStr()
                 buffstr[i] = '/';
                 i++;
                 break;            
-      /*case 56:
-                printch(' ');           Right shift
+      case 56:
+                printch(' ');           
                 buffstr[i] = ' ';
                 i++;
-                break;*/           
+                break;         
         case 57:
-                printch(' ');
-                buffstr[i] = ' ';
+                printch('/');
+                buffstr[i] = '/';
                 i++;
                 break;
         case 58:
