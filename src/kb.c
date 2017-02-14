@@ -277,22 +277,13 @@ string readStr()
                 printch('.');
                 buffstr[i] = '.';
                 i++;
-                break;            
-        case 53:
-                printch('/');
-                buffstr[i] = '/';
-                i++;
-                break;            
+                break;          
         case 54:
                 printch('.');
                 buffstr[i] = '.';
                 i++;
                 break;            
-        case 55:
-                printch('/');
-                buffstr[i] = '/';
-                i++;
-                break;            
+           
       case 56:
                 printch(' ');           
                 buffstr[i] = ' ';
