@@ -41,7 +41,7 @@ void launch_shell(int n)
 		    }
 		     else if(strEql(ch,"cd"))
 		    {
-		    	cd();
+		    print("IS BUGGED SO NOPE");
 		    }  else if(strEql(ch,"install"))
 		    {
 		    	install();
