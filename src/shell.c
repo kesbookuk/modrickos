@@ -1,9 +1,8 @@
 #include "../include/shell.h"
-string dir = "modrick/";
 void
 shutdown()
 {
-  print("                        shutting down                           ");
+  print("                        -=shutting down=-                           ");
   for (;;)
     ;
 }
@@ -15,15 +14,12 @@ launch_shell(int n)
   int counter = 0;
   do {
     print("(");
-    print(dir);
     print(")> ");
     ch = readStr();
     if (strEql(ch, "cmd")) {
       print("\nYou are already in kterm well a new window is added\n");
       launch_shell(n + 1);
-    } else if (strEql(ch, "cr")) {
-      bsod(1000);
-      shutdown();
+    }
     } else if (strEql(ch, "clear")) {
       clearScreen();
     } else if (strEql(ch, "kterm")) {
@@ -97,47 +93,9 @@ echo()
   print(str);
   print("\n");
 }
-void
-sort()
-{
-  int arr[100];
-  print("\nArray size: ");
-  int n = str_to_int(readStr());
-  print("\n");
-  fill_array(arr, n);
-  print("Before sorting:\n");
-  print_array(arr, n);
-  print("\nOrdre: (1 for increassing/ 0 for decreassing): ");
-  int ordre = str_to_int(readStr());
-  insertion_sort(arr, n, ordre);
-  print("\nAfter sorting:\n");
-  print_array(arr, n);
-}
 
-void
-fill_array(int arr[], int n)
-{
-  int i = 0;
-  for (i = 0; i < n; i++) {
-    print("ARR[");
-    print(int_to_string(i));
-    print("]: ");
-    arr[i] = str_to_int(readStr());
-    print("\n");
-  }
-}
 
-int
-sum_array(int arr[], int n)
-{
-  int i = 0;
-  int s = 0;
-  for (i = 0; i < n; i++) {
-    s += arr[i];
-  }
-  return s;
-}
-}
+
 
 void
 gcd()
