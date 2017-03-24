@@ -69,21 +69,7 @@ launch_shell(int n)
   } while (!strEql(ch, "exit"));
 }
 
-void
-sum()
-{
-  print("\nHow many numbers: ");
-  int n = str_to_int(readStr());
-  int i = 0;
-  print("\n");
-  int arr[n];
-  fill_array(arr, n);
-  int s = sum_array(arr, n);
 
-  print("Result: ");
-  print(int_to_string(s));
-  print("\n");
-}
 void
 echo()
 {
@@ -131,10 +117,7 @@ gcd()
     print("<<<<<<<<<<<<<<<<welcome to modrick install>>>>>>>>>>>>>>>>>>>>>>>>>>");
   }
 
-  void modrick()
-  {
-    print_colored("\nerror wip & no display drivers detected\n", 4, 14);
-  }
+
   void echocolor()
   {
     print("\n\n Text ? : ");
