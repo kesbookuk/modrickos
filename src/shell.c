@@ -45,7 +45,11 @@ void launch_shell(int n)
 		    }  else if(strEql(ch,"install"))
 		    {
 		    	install();
-		    }
+		    }else if(strEql(ch,"dir")){
+			     
+			   dir();  
+			     
+		     }
 		    else if(strEql(ch,"sum"))
 		    {
 		    	sum();
@@ -262,8 +266,14 @@ void print_matrix(int matrix[][100],int rows,int cols)
 			print("   ");
 		}
 		print("\n");
-	}
-}void box(){
+	}void dir(){
+			
+		
+		
+
+	
+	
+	}void box(){
     
  print_colored("\n#####\n#   #\n#   #\n#####\n",1,2);   
     
