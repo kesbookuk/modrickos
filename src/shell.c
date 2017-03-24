@@ -162,18 +162,7 @@ gcd()
   print(int_to_string(matrix[n - 1][0]));
   print("\n");
 }
-void
-print_matrix(int matrix[][100], int rows, int cols)
-{
-  int i = 0;
-  int j = 0;
-  for (i = 0; i < rows; i++) {
-    for (j = 0; j < cols; j++) {
-      print(int_to_string(matrix[i][j]));
-      print("   ");
-    }
-    print("\n");
-  }
+
   void createdir() {}
   void dir() {}
   void box() { print_colored("\n#####\n#   #\n#   #\n#####\n", 1, 2); }
@@ -181,8 +170,7 @@ print_matrix(int matrix[][100], int rows, int cols)
   {
     set_screen_color(6, 1);
     clearScreen();
-    print(
-      "<<<<<<<<<<<<<<<<welcome to modrick install>>>>>>>>>>>>>>>>>>>>>>>>>>");
+    print("<<<<<<<<<<<<<<<<welcome to modrick install>>>>>>>>>>>>>>>>>>>>>>>>>>");
   }
 
   void modrick()
